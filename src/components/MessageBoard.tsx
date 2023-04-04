@@ -91,7 +91,7 @@ export const MessageBoard: FC = () => {
     
 
     return (
-        <>
+        <>{/* eslint-disable react/jsx-key */}
             {baseaccounts.map((baseAccount) => {
                 return (
                     <div className="md:hero-content flex flex-col">
