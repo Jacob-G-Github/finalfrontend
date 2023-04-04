@@ -66,7 +66,7 @@ export const MessageBoard: FC = () => {
         }
     }
 
-    const updateMessage = async (publicKey) => {
+    const updateMessage = async () => {
         try {
             const anchProvider = getProvider();
             const program = new Program(idl_object, programID, anchProvider);
@@ -94,7 +94,7 @@ export const MessageBoard: FC = () => {
         <>{/* eslint-disable react/jsx-key */}
             {baseaccounts.map((baseAccount) => {
                 return (
-                    <div className="md:hero-content flex flex-col">
+                    <div key={baseAccount.index} className="md:hero-content flex flex-col">
                         <span>{"Message: " + baseAccount.data.toString()}</span>      
                                         
                     </div>
